@@ -9,6 +9,22 @@ A diferencia de la versión original, esta implementación permite parametrizar 
 - **Soporte de Google Sheets**: Incluye herramientas para listar pestañas de hojas de cálculo.
 - **Configuración mediante Env Vars**: No más rutas fijas; tú decides dónde guardar tus llaves.
 
+## Requisitos Previos (Google Cloud)
+
+Para que Antigravity pueda acceder a tus archivos, debes habilitar los servicios en [Google Cloud Console](https://console.cloud.google.com/):
+
+1. **Crear Proyecto**: Crea un nuevo proyecto (ej: "Antigravity Drive").
+2. **Habilitar APIs**: Busca y habilita las siguientes APIs:
+   - **Google Drive API**
+   - **Google Sheets API**
+3. **Configurar Consentimiento (OAuth Consent Screen)**:
+   - Elige un nombre para la aplicación.
+   - Agrega tu correo como **Usuario de prueba** (Test User).
+4. **Crear Credenciales**:
+   - Ve a "Credentials" -> "Create Credentials" -> **OAuth client ID**.
+   - Tipo de aplicación: **Desktop App**.
+   - Descarga el archivo JSON (será tu llaves para `GOOGLE_APPLICATION_CREDENTIALS`).
+
 ## Instalación
 
 1. Clona este repositorio:
